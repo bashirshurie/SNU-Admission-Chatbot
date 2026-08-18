@@ -96,7 +96,7 @@ export async function POST(req: Request) {
     const recentMessages = messages.slice(-8);
 
     const result = await streamText({
-      model: groq('llama-3.3-70b-versatile'),
+      model: groq('llama-3.1-8b-instant'),
       system: SYSTEM_PROMPT,
       messages: recentMessages,
     });
